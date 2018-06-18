@@ -4,13 +4,13 @@ require('./env');
 
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser'); //You need to use bodyParser() if you want the form data to be available in req.body.
 
 app.disable('x-powered-by');
 
-const cors = require('cors');
+const cors = require('cors'); //It is a standard for allowing browsers to request resources from apis on other domains.
 //const bodyParser = require('body-parser'); dont delete this
-const morgan = require('morgan');
+const morgan = require('morgan'); //HTTP request logger middleware for node.js. You could see the logs in the terminal for each time an HTTP request was made
 const { JWT_KEY } = require('./env');
 const jwt = require('express-jwt');
 //const cookieParser = require('cookie-parser');
